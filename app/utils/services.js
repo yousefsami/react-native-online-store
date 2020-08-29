@@ -1,4 +1,4 @@
-import { Image, Dimensions } from 'react-native';
+import {Image, Dimensions} from 'react-native';
 
 export function getImageHeight(imageUri, maxWidth, maxHeight) {
   return new Promise((res, rej) => {
@@ -10,17 +10,17 @@ export function getImageHeight(imageUri, maxWidth, maxHeight) {
           : Dimensions.get('window').height;
         const _maxWidth = maxWidth ? maxWidth : Dimensions.get('window').width;
         const ratio = Math.min(_maxWidth / srcWidth, _maxHeight / srcHeight);
-        res({ width: srcWidth * ratio, height: srcHeight * ratio });
+        res({width: srcWidth * ratio, height: srcHeight * ratio});
       },
-      error => {
+      (error) => {
         rej(error);
-      }
+      },
     );
   });
 }
 
 export function categorizeObject(arr, parent, keyName) {
-  return new Promise(async res => {
+  return new Promise(async (res) => {
     var out = [];
     for (var i in arr) {
       if (arr[i].parent == parent) {
