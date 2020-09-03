@@ -1,22 +1,22 @@
-import { env } from './environment';
+import {env} from './environment';
 import Toast from 'react-native-root-toast';
 
 export function post(affix, data) {
   return fetch(env.server + affix, {
     headers: {
       Accept: 'application/json',
-      'Content-Type': 'application/json'
+      'Content-Type': 'application/json',
     },
     method: 'POST',
-    body: JSON.stringify(data)
+    body: JSON.stringify(data),
   })
-    .then(function(res) {
+    .then(function (res) {
       return res.json();
     })
-    .catch(function(res) {
+    .catch(function (res) {
       Toast.show(
         'Something wents wrong, please try again later.',
-        env.toastConfig
+        env.toastConfig,
       );
       console.error('error', res);
     });
@@ -26,17 +26,17 @@ export function get(affix) {
   return fetch(env.server + affix, {
     headers: {
       Accept: 'application/json',
-      'Content-Type': 'application/json'
+      'Content-Type': 'application/json',
     },
-    method: 'GET'
+    method: 'GET',
   })
-    .then(function(res) {
+    .then(function (res) {
       return res.json();
     })
-    .catch(function(res) {
+    .catch(function (res) {
       Toast.show(
         'Something wents wrong, please try again later.',
-        ebv.toastConfig
+        env.toastConfig,
       );
       console.error('error', res);
     });
@@ -46,18 +46,18 @@ export function _delete(affix, data) {
   return fetch(env.server + affix, {
     headers: {
       Accept: 'application/json',
-      'Content-Type': 'application/json'
+      'Content-Type': 'application/json',
     },
     method: 'DELETE',
-    body: JSON.stringify(data)
+    body: JSON.stringify(data),
   })
-    .then(function(res) {
+    .then(function (res) {
       return res.json();
     })
-    .catch(function(res) {
+    .catch(function (res) {
       Toast.show(
         'Something wents wrong, please try again later.',
-        env.toastConfig
+        env.toastConfig,
       );
       console.error('error', res);
     });
@@ -67,18 +67,18 @@ export function put(affix, data) {
   return fetch(env.server + affix, {
     headers: {
       Accept: 'application/json',
-      'Content-Type': 'application/json'
+      'Content-Type': 'application/json',
     },
     method: 'PUT',
-    body: JSON.stringify(data)
+    body: JSON.stringify(data),
   })
-    .then(function(res) {
+    .then(function (res) {
       return res.json();
     })
-    .catch(function(res) {
+    .catch(function (res) {
       Toast.show(
         'Something wents wrong, please try again later.',
-        env.toastConfig
+        env.toastConfig,
       );
       console.error('error', res);
     });
@@ -88,18 +88,18 @@ export function patch(affix, data) {
   return fetch(env.server + affix, {
     headers: {
       Accept: 'application/json',
-      'Content-Type': 'application/json'
+      'Content-Type': 'application/json',
     },
     method: 'PATCH',
-    body: JSON.stringify(data)
+    body: JSON.stringify(data),
   })
-    .then(function(res) {
+    .then(function (res) {
       return res.json();
     })
-    .catch(function(res) {
+    .catch(function (res) {
       Toast.show(
         'Something wents wrong, please try again later.',
-        env.toastConfig
+        env.toastConfig,
       );
       console.error('error', res);
     });
