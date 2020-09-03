@@ -12,7 +12,7 @@ const redTheme = {
   SUCCESS_BUTTON_COLOR: '#8BC34A',
   SUCCESS_BUTTON_COLOR_TEXT: '#FFF',
   WARNING_BUTTON_COLOR: '#FFC107',
-  WARNING_BUTTON_COLOR_TEXT: '#FFF'
+  WARNING_BUTTON_COLOR_TEXT: '#FFF',
 };
 
 const blueTheme = {
@@ -29,12 +29,12 @@ const blueTheme = {
   SUCCESS_BUTTON_COLOR: '#8BC34A',
   SUCCESS_BUTTON_COLOR_TEXT: '#FFF',
   WARNING_BUTTON_COLOR: '#FFC107',
-  WARNING_BUTTON_COLOR_TEXT: '#FFF'
+  WARNING_BUTTON_COLOR_TEXT: '#FFF',
 };
 
 export const env = {
   // Main server address
-  server: 'http://10.0.3.2:3000',
+  server: 'http://online-store-db.herokuapp.com',
   // Api address
   api: {
     categories: '/categories',
@@ -49,14 +49,14 @@ export const env = {
     banners: '/banners',
     users: '/users',
     wishList: '/wishList',
-    messages: '/messages'
+    messages: '/messages',
   },
   config: {
     currency_position: 'right',
     price_thousand_sep: ',',
     price_decimal_sep: '.',
     price_num_decimals: '3',
-    price_currency_symbol: '\u0024'
+    price_currency_symbol: '\u0024',
   },
   toastConfig: {
     duration: 1000,
@@ -64,8 +64,8 @@ export const env = {
     animation: true,
     shadow: true,
     hideOnPress: true,
-    delay: 0
+    delay: 0,
   },
   // Current theme
-  theme: redTheme
+  theme: redTheme,
 };
