@@ -4,8 +4,8 @@ import {styles} from './index.style';
 import SliderComponent from '../../components/slider/slider.component';
 
 export default IndexScreen = (props) => {
-  goToSingle = () => {
-    props.navigation.navigate('Single');
+  const goTo = (route) => {
+    props.navigation.navigate(route);
   };
 
   return (
@@ -13,7 +13,8 @@ export default IndexScreen = (props) => {
       <ScrollView contentContainerStyle={styles.rootScroll}>
         <SliderComponent navigation={props.navigation} />
         <Text>MainIndex</Text>
-        <Button title="Go To Single" onPress={goToSingle} />
+        <Button title="Go To Single" onPress={() => goTo('Single')} />
+        <Button title="Go To Login" onPress={() => goTo('Login')} />
       </ScrollView>
     </SafeAreaView>
   );
