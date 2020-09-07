@@ -6,6 +6,7 @@ import {createDrawerNavigator} from '@react-navigation/drawer';
 import IndexScreen from '../screens/index/index.screen';
 import SingleScreen from '../screens/single/single.screen';
 import LoginScreen from '../screens/login/login.screen';
+import RegisterScreen from '../screens/register/register.screen';
 
 const Stack = createStackNavigator();
 const Drawer = createDrawerNavigator();
@@ -30,6 +31,13 @@ const CredentialStack = () => {
       <Stack.Screen
         name="Login"
         component={LoginScreen}
+        options={{
+          headerShown: false,
+        }}
+      />
+      <Stack.Screen
+        name="Register"
+        component={RegisterScreen}
         options={{
           headerShown: false,
         }}
