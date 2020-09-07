@@ -7,6 +7,7 @@ import IndexScreen from '../screens/index/index.screen';
 import SingleScreen from '../screens/single/single.screen';
 import LoginScreen from '../screens/login/login.screen';
 import RegisterScreen from '../screens/register/register.screen';
+import ForgotPasswordScreen from '../screens/forgot-password/forgot-password.screen';
 
 const Stack = createStackNavigator();
 const Drawer = createDrawerNavigator();
@@ -38,6 +39,13 @@ const CredentialStack = () => {
       <Stack.Screen
         name="Register"
         component={RegisterScreen}
+        options={{
+          headerShown: false,
+        }}
+      />
+      <Stack.Screen
+        name="ForgotPassword"
+        component={ForgotPasswordScreen}
         options={{
           headerShown: false,
         }}
